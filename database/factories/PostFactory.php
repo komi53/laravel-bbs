@@ -1,0 +1,22 @@
+<?php
+
+use Faker\Generator as Faker;
+
+$factory->define(App\Post::class, function (Faker $faker) {
+    return [
+        'title' => '投稿のタイトル',
+        'body' => "本文です。テキストテキストテキストテキストテキストテキストテキストテキストテキストテキスト。\nテキストテキストテキストテキストテキストテキストテキストテキストテキストテキスト。テキストテキストテキストテキストテキストテキストテキストテキストテキストテキスト。",
+    ];
+});
+
+
+# database/migrations/CommentFactory.php
+<?php
+
+use Faker\Generator as Faker;
+
+$factory->define(App\Comment::class, function (Faker $faker) {
+    return [
+        'body' => "コメントです。テキストテキストテキストテキストテキストテキスト。\nテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキスト。",
+    ];
+});
